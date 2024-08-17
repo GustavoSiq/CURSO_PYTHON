@@ -1,6 +1,5 @@
 import os
 
-
 palavra = 'Gustavo'.lower()
 letras_corretas = ''
 repeticoes = 0
