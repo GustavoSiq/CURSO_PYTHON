@@ -13,7 +13,7 @@ lista.append('60')
 item_removido = lista.pop(2)
 lista.append(70)
 del lista[-1]
-# Prinmeiro insere a posição na lista e depois o que será inserido.
+# Primeiro insere a posição na lista e depois o que será inserido.
 lista.insert(0, 'Gustavo')
 # lista.clear()
 print(lista, 'Item removido: ', item_removido)
