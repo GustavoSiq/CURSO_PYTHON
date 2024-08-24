@@ -15,7 +15,7 @@ while True:
         os.system('cls')
         if len(lista) == 0:
             print('Você ainda não adicionou produtos...')
-        for indice, produto in enumerate(lista):
+        for indice, produto in enumerate(lista, start=1):
             print(indice, produto)
     elif escolha == 'a' or escolha == 'apagar':
         try:
@@ -25,6 +25,10 @@ while True:
             print('Esse índice não foi encontrado...')
         except ValueError:
             print('Digite um número inteiro...')
+        except KeyboardInterrupt:
+            print('Você cancelou a exclusão...')
+        except Exception:
+            print('Erro desconhecido...')
     elif escolha == 's' or escolha == 'sair':
         break
     else:
