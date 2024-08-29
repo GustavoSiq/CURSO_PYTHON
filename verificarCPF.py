@@ -1,7 +1,11 @@
-cpf = input('Digite seu CPF: ')
-# cpf = '451.903.620-86'
-cpf = cpf.replace('.',"")
-cpf = cpf.replace("-","")
+import re
+import sys
+
+entrada = input('Digite seu CPF: ')
+# cpf = '451.903.620-86' # CPF gerado pelo gerador de CPF's da 4Devs, expemplo para testes.
+# Com o re.sub consigo pegar qualquer coisa que não esteja entre
+# 0 e 9 (ou seja, que não seja um número) e substituir.
+cpf = re.sub(r'[^0-9]','',entrada)
 nove_digitos = cpf[:9]
 primeiro_contador_regressivo = 10
 segundo_contador_regressivo = 11
@@ -10,6 +14,11 @@ soma_segundo_digito = 0
 primeiro_digito = 0
 segundo_digito = 0
 cpf_gerado = ''
+entrada_sequencial = entrada == entrada[0] * len(entrada)
+
+if entrada_sequencial:
+    print('CPF INVÁLIDO!')
+    sys.exit()
 
 for numero in cpf:
     if primeiro_contador_regressivo > 1:
