@@ -31,7 +31,4 @@ segundo_digito = segundo_digito if segundo_digito <= 9 else 0
 
 cpf_gerado = f'{nove_digitos}{primeiro_digito}{segundo_digito}'
 
-print(primeiro_digito)
-print(segundo_digito)
-print(nove_digitos)
 print(cpf_gerado)
